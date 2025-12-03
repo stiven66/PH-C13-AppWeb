@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Panel Admin - Alojamiento Premium</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Alojamiento Premium - Admin</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a id="logout-link" href="#">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Reservas (Administrador)</h1>
+
+      <section class="filters">
+        <label>Desde <input id="from" type="date" /></label>
+        <label>Hasta <input id="to" type="date" /></label>
+        <button id="filter-btn">Filtrar</button>
+      </section>
+
+      <section id="reservas-list">
+        <p>Cargando reservas...</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Alojamiento Premium</p>
+    </footer>
+
+    <script src="js/api.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/dashboard-admin.js" defer></script>
+  </body>
+</html>

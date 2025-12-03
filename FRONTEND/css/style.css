@@ -1,0 +1,289 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("/FRONTEND/assets/header2.jpg"); /* aquí va la ruta de tu imagen */
+  background-size: 100% 100%;   /* muestra toda la imagen */
+  background-position: top; /* centra la imagen */
+    background-repeat: no-repeat;
+  padding: 6rem 1rem;
+  color: white;
+}
+
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Carrusel */
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+/* Información */
+.info {
+  padding: 2rem;
+  text-align: center;
+}
+
+.servicios {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Promociones */
+.promociones {
+  background-color: #eef;
+  padding: 2rem;
+}
+
+.promo-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+/* Ubicación */
+.ubicacion {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Testimonios */
+.testimonios {
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonio {
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  margin-bottom: 1rem;
+}
+
+.social a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+/* Auth Pages */
+/* .auth-body {
+  display: flex;
+  flex-direction: column;  
+  justify-content: flex-start; 
+  align-items: center;      
+  min-height: 100vh;
+} */
+
+
+.auth-body {
+  display: flex;
+  flex-direction: column;   /* coloca header, contenido y footer en columna */
+  min-height: 100vh;        /* ocupa toda la altura de la pantalla */
+}
+
+header, footer {
+  width: 100%;              /* que ocupen todo el ancho */
+}
+
+.auth-container {
+  background-color: white;
+  padding: 4rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin-right: 12rem;
+  margin-left: 12rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-container button {
+  padding: 0.7rem;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-register {
+   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("/FRONTEND/assets/header2.jpg"); /* aquí va la ruta de tu imagen */
+  background-size: 100% 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 6rem 1rem;
+  color: white;
+}
+
+/* Reservas */
+.reservas {
+  padding: 2rem;
+}
+
+.reserva-card {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.reserva-card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.panel-seccion {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+
+/* ===== Complemento para dashboards y responsividad ===== */
+
+/* Contenedor central reutilizable */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Ajustes para el header sticky y sombra ligera */
+.navbar, .navbar-register {
+  box-shadow: 0 2px 8px rgba(15,23,42,0.06);
+  backdrop-filter: blur(6px);
+}
+
+/* Ajustes para imágenes del carrusel en pantallas grandes/pequeñas */
+.carousel-container img {
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+/* Tarjetas de reserva (usuario) */
+.reserva-card, .reserva-admin {
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Formularios auth: ancho máximo y centrado en pantallas pequeñas */
+.auth-container {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem 1.5rem;
+}
+
+/* Botones principales */
+button {
+  font-weight: 600;
+  transition: filter .12s ease;
+}
+button:hover { filter: brightness(.98); }
+
+/* Mensajes de estado */
+[role="status"] { margin-top: 0.6rem; color: #6b7280; }
+
+/* Responsive: simplificar navbar en móvil */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .carousel-container img { height: 180px; object-fit: cover; }
+  .auth-container { margin: 1.5rem 0.75rem; padding: 1rem; }
+}
+@media (max-width: 480px) {
+  .carousel-container img { height: 160px; }
+  .auth-container { padding: 0.9rem; margin-top: 3rem; margin-bottom: 3rem; }
+}

@@ -1,0 +1,66 @@
+<!-- Aca el usuario cuando se logee podra ver cuando puede reservar y sus reservas ya hechas. -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Panel Usuario - Alojamiento Premium</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+            <div class="logo">Alojamiento Premium</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a id="logout-link" href="login.html">Cerrar sesión</a></li>
+            </ul>
+            </nav>
+        </header>
+
+        <main class="container">
+            <h1>Mis Reservas</h1>
+            <!-- En este contenedor se cargaran las reservas del usuario realizadas cargadas desde la API -->
+            <div id="reservas-container">
+                <p>Cargando tus reservas...</p>
+            </div>
+
+            <hr />
+
+            <!-- Formulario para que el cliente reserve -->
+            <h2>Crear nueva reserva</h2>
+            <form id="create-reservation-form">
+                <input id="accommodationId" type="hidden" value="1" />
+
+                <label>Tipo de reserva
+                    <select id="roomType" required>
+                    <option value="">Selecciona...</option>
+                    <option value="single">Habitación sencilla</option>
+                    <option value="double">Habitación doble</option>
+                    <option value="full">Alojamiento completo</option>
+                    </select>
+                </label>
+
+                <label>Fecha inicio
+                    <input id="startDate" type="date" required />
+                </label>
+
+                <label>Fecha fin
+                    <input id="endDate" type="date" required />
+                </label>
+
+                <button type="submit">Reservar</button>
+            </form>
+
+            <div id="message" role="status"></div>
+        </main>
+
+        <footer>
+            <p>© 2025 Alojamiento Premium</p>
+        </footer>
+
+        <script src="js/api.js" defer></script>
+        <script src="js/auth.js" defer></script>
+        <script src="js/dashboard-user.js" defer></script>
+    </body>
+</html>
